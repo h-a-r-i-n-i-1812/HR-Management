@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colourful Form</title>
+    <style>
+      /* Set background color for the page */
+      body {
+        background-color: #9cb6eb;
+        background-image:url("try.jpeg") ;
+       background-repeat: no-repeat;
+       background-size: cover;
+      }
+      
+      /* Style the form container */
+      .form-container {
+        background-color: #fbffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #888888;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      
+      /* Style the form heading */
+      .form-heading {
+        color: #ff4081;
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      /* Style the form input fields */
+      input[type="text"],
+      input[type="email"],
+      input[type="file"],
+      input[type="date"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+      }
+      #type{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+      }
+      /* Style the form submit button */
+      input[type="submit"] {
+        background-color: #ff4081;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      /* Change submit button background color on hover */
+      input[type="submit"]:hover {
+        background-color: #ff6699;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div class="form-container">
+      <h2 class="form-heading">Employee Details</h2>
+      <form method="POST" action="Update.php">
+        <label for="textbox">Enter Employee ID :</label>
+          <input type="text" id="text0" name="b1">
+        <label for="type">Select :</label>
+        <select id="type" name="type" onchange="showTextBox()">
+          <option value="f_name">First Name</option>
+          <option value="l_name">Last Name</option>
+          <option value="dob">DOB</option>
+          <option value="role">Role</option>
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+          <option value="photo">Profile</option>
+        </select>
+        
+        <div id="textbox-container1" style="display:none;">
+          <label for="textbox">Enter :</label>
+          <input type="text" id="text1" name="textbox1">
+        </div>
+    
+        <div id="textbox-container2" style="display:none;">
+            <label for="textbox">Date of Birth :</label>
+            <input type="date" id="text2" name="textbox2">
+          </div>
+    
+          <div id="textbox-container3" style="display:none;">
+            <label for="textbox">Profile Picture :</label>
+            <input type="file" id="text3" name="textbox3">
+          </div>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <script>
+        function showTextBox() {
+      var selectBox = document.getElementById("type");
+      var selectedOption = selectBox.options[selectBox.selectedIndex].value;
+      var textboxContainer1 = document.getElementById("textbox-container1");
+      var textboxContainer2 = document.getElementById("textbox-container2");
+      var textboxContainer3 = document.getElementById("textbox-container3");
+    
+      if (selectedOption === "role"||selectedOption === "f_name" || selectedOption === "l_name" ||selectedOption === "phone"||selectedOption === "email") {
+        textboxContainer1.style.display = "block";
+      } 
+      else if (selectedOption === "dob") {
+        textboxContainer2.style.display = "block";
+      } 
+      else {
+        textboxContainer3.style.display = "block";
+      } 
+      
+    }
+      </script>
+  </body>
+</html>

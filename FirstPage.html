@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			background-image:url("try.jpeg") ;
+       background-repeat: no-repeat;
+       background-size: cover;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 50px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.img-container {
+			position: relative;
+			flex: 1;
+			margin-right: 50px;
+		}
+
+		.img-container img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+		}
+
+		.btn {
+			display: block;
+			width: 200px;
+			margin-bottom: 20px;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+			text-shadow: 1px 1px #333;
+			transition: background-color 0.3s;
+		}
+
+		.employee {
+			background-color: #4CAF50;
+		}
+
+		.employee:hover {
+			background-color: #3e8e41;
+		}
+
+		.hr {
+			background-color: #F44336;
+		}
+
+		.hr:hover {
+			background-color: #d32f2f;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="img-container">
+			<img src="hr.png" alt="Company Image">
+		</div>
+		<div class="btn-container">
+			<a href="empLogin.html" class="btn employee">Employee</a>
+			<a href="form.html" class="btn hr">HR</a>
+		</div>
+	</div>
+</body>
+</html>
